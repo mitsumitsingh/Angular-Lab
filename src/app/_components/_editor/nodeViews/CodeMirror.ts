@@ -8,7 +8,7 @@ import { EditorView } from 'prosemirror-view';
 import CodeMirror from 'codemirror';
 import 'codemirror/mode/javascript/javascript';
 
-import schema from './../../_admin/questions/schema';
+import schema from './../schema';
 
 interface ComputeChange {
   from: number;

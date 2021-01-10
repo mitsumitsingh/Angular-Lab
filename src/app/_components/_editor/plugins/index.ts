@@ -7,7 +7,7 @@ import { Plugin } from 'prosemirror-state';
 import { image } from 'ngx-editor/plugins';
 
 import { buildInputRules } from './input-rules';
-import schema from '.././questions/schema';
+import schema from './../schema';
 
 const isMacOs = /Mac/.test(navigator.platform);
 
