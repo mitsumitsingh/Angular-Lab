@@ -15,8 +15,10 @@ import { AdminComponent } from './_components/_admin/admin';
 import { LoginComponent } from './_components/_public/login';;
 import { QuestionsComponent } from './_components/_admin/questions/questions.component';
 import { NgxEditorModule } from 'ngx-editor';;
-import { CustomMenuComponent } from './_components/_admin/custom-menu/custom-menu.component'
-import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common';;
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EditorComponent } from './_components/_editor/editor/editor.component';
+import { CustomMenuComponent } from './_components/_editor/custom-menu/custom-menu.component';
 
 @NgModule({
     imports: [
@@ -27,14 +29,16 @@ import { CommonModule } from '@angular/common';
         NgxEditorModule,
         CommonModule,
         FormsModule,
+        BrowserAnimationsModule
     ],
     declarations: [
         AppComponent,
         HomeComponent,
         AdminComponent,
         LoginComponent,
-        QuestionsComponent ,
-        CustomMenuComponent   
+        QuestionsComponent,
+        CustomMenuComponent,
+        EditorComponent  
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

@@ -2,20 +2,7 @@
 	<h2 class="title" style = "text-align:center">Welcome to predecode editor</h2>
 	<div class="row">
 		<div class="col-sm-8">
-			<div class="content">
-				<form [formGroup]="form">
-					<div class="editor">
-						<ngx-editor-menu [editor]="editor" [toolbar]="toolbar" [customMenuRef]="customMenu">
-						</ngx-editor-menu>
-						<ngx-editor [editor]="editor" formControlName="editorContent">
-						</ngx-editor>
-					</div>
-				</form>
-				<!-- custom menu -->
-				<ng-template #customMenu>
-					<app-custom-menu [editor]="editor"></app-custom-menu>
-				</ng-template>
-			</div>
+			<editor (editorEvent)="content($event)"></editor>
 		</div>
 		<div class="col-sm-4">
 			flskdjflkjsdlkfj
@@ -23,5 +10,4 @@
 			klsdjflkjs
 		</div>
 	</div>
-	<button type="button" class="btn btn-primary" (click)="value()">View Value</button>
 </div>
