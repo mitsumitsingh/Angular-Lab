@@ -2,6 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { CKEditorModule } from 'ng2-ckeditor';
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers';
@@ -12,13 +13,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { HomeComponent } from './_components/_public/home';
 import { AdminComponent } from './_components/_admin/admin';
-import { LoginComponent } from './_components/_public/login';;
+import { LoginComponent } from './_components/_public/login';
 import { QuestionsComponent } from './_components/_admin/questions/questions.component';
-import { NgxEditorModule } from 'ngx-editor';;
-import { CommonModule } from '@angular/common';;
+import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { EditorComponent } from './_components/_shared/_editor/editor/editor.component';
-import { CustomMenuComponent } from './_components/_shared/_editor/custom-menu/custom-menu.component';
 import { ImageUploadComponent } from './_components/_shared/image-upload/image-upload.component';
 
 
@@ -26,7 +24,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressBarModule } from '@angular/material/progress-bar';;
+import { EditorComponent } from './_components/_shared/editor/editor.component'
 
 @NgModule({
     imports: [
@@ -34,10 +33,10 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
         ReactiveFormsModule,
         HttpClientModule,
         AppRoutingModule,
-        NgxEditorModule,
         CommonModule,
         FormsModule,
         BrowserAnimationsModule,
+        CKEditorModule,
         MatToolbarModule,  
         MatIconModule,  
         MatButtonModule,  
@@ -50,9 +49,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
         AdminComponent,
         LoginComponent,
         QuestionsComponent,
-        CustomMenuComponent,
-        EditorComponent ,
-        ImageUploadComponent 
+        ImageUploadComponent ,
+        EditorComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

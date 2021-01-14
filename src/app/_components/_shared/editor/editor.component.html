@@ -1,0 +1,12 @@
+<div class="container-fluid">
+	<h2 class="title" style = "text-align:center">Welcome to predecode editor</h2>
+	<div class="row">
+		<div class="col-sm-8">
+            <ckeditor [(ngModel)]="data" [config]="config" debounce="500"></ckeditor>
+            <button type="button" class="btn btn-primary" (click)="editorContent()">Finish Editing</button>
+		</div>
+		<div class="col-sm-4">
+			<image-upload></image-upload>
+		</div>
+	</div>
+</div>

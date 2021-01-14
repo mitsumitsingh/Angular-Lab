@@ -1,8 +1,19 @@
-<button mat-button color="warn" (click)="onClick()">
-    <mat-icon>file_upload</mat-icon>
-    {{text}}
-</button>
-<br/>
+<div class="row" style="background-color: aliceblue;">
+    <div class="col-sm-1">
+        
+    </div>
+    <div class="col-sm-7" style="padding-top: 8px;">
+        Please Upload the Images.
+    </div>
+    <div class="col-sm-4">
+        <button mat-button color="warn" (click)="onClick()">
+            <mat-icon>file_upload</mat-icon>
+            {{text}}
+        </button>
+        <br/>
+
+    </div>
+</div>
 <ul>
     <li *ngFor="let file of files" [@fadeInOut]="file.state">
           <mat-progress-bar [value]="file.progress"></mat-progress-bar>
@@ -15,7 +26,9 @@
           </span>
     </li>
 </ul>
-<input type="file" id="fileUpload" name="fileUpload" multiple="multiple" 
 
-accept="{{accept}}" style="display:none;"/>
+<input type="file" id="fileUpload" name="fileUpload" multiple="multiple" accept="{{accept}}" style="display:none;"/>
+<div *ngFor="let img of imageUrls">
+    ImagePath :: {{ img }}
+</div>
 
