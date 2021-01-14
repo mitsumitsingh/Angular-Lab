@@ -17,8 +17,16 @@ import { QuestionsComponent } from './_components/_admin/questions/questions.com
 import { NgxEditorModule } from 'ngx-editor';;
 import { CommonModule } from '@angular/common';;
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { EditorComponent } from './_components/_editor/editor/editor.component';
-import { CustomMenuComponent } from './_components/_editor/custom-menu/custom-menu.component';
+import { EditorComponent } from './_components/_shared/_editor/editor/editor.component';
+import { CustomMenuComponent } from './_components/_shared/_editor/custom-menu/custom-menu.component';
+import { ImageUploadComponent } from './_components/_shared/image-upload/image-upload.component';
+
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
     imports: [
@@ -29,7 +37,12 @@ import { CustomMenuComponent } from './_components/_editor/custom-menu/custom-me
         NgxEditorModule,
         CommonModule,
         FormsModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        MatToolbarModule,  
+        MatIconModule,  
+        MatButtonModule,  
+        MatCardModule,  
+        MatProgressBarModule
     ],
     declarations: [
         AppComponent,
@@ -38,7 +51,8 @@ import { CustomMenuComponent } from './_components/_editor/custom-menu/custom-me
         LoginComponent,
         QuestionsComponent,
         CustomMenuComponent,
-        EditorComponent  
+        EditorComponent ,
+        ImageUploadComponent 
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
