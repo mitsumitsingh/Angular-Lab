@@ -34,6 +34,8 @@ export class ImageUploadComponent implements OnInit {
 
   files: Array<FileUploadModel> = [];
 
+  imageUrls : any = [];
+
   constructor(private _http: HttpClient) { }
 
   ngOnInit() {
@@ -92,9 +94,11 @@ export class ImageUploadComponent implements OnInit {
         ).subscribe(
               (event: any) => {
                     if (typeof (event) === 'object') {
-                      console.log(event['body']['fileDownloadUri']);
-                          this.removeFileFromArray(file);
-                          this.complete.emit(event.body);
+                          console.log(event['body']['fileDownloadUri']);
+                        this.imageUrls.push(event['body']['fileDownloadUri']);
+                        console.log(this.imageUrls);
+                        this.removeFileFromArray(file);
+                        this.complete.emit(event.body);
                     }
               }
         );
