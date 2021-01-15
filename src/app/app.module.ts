@@ -24,8 +24,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
-import { MatProgressBarModule } from '@angular/material/progress-bar';;
-import { EditorComponent } from './_components/_shared/editor/editor.component'
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { EditorComponent } from './_components/_shared/editor/editor.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
     imports: [
@@ -39,9 +42,12 @@ import { EditorComponent } from './_components/_shared/editor/editor.component'
         CKEditorModule,
         MatToolbarModule,  
         MatIconModule,  
-        MatButtonModule,  
+        MatButtonModule, 
+        MatFormFieldModule, 
         MatCardModule,  
-        MatProgressBarModule
+        MatProgressBarModule,
+        MatInputModule,
+        MatSelectModule
     ],
     declarations: [
         AppComponent,

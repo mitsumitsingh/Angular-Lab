@@ -3,10 +3,10 @@
 	<div class="row">
 		<div class="col-sm-8">
             <ckeditor [(ngModel)]="data" [config]="config" debounce="500"></ckeditor>
-            <button type="button" class="btn btn-primary" (click)="editorContent()">Finish Editing</button>
 		</div>
 		<div class="col-sm-4">
 			<image-upload></image-upload>
+			<button type="button" class="btn btn-primary" style="margin-top: 30px;" (click)="editorContent()">Finish Editing</button>
 		</div>
 	</div>
 </div>
